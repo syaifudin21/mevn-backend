@@ -1,0 +1,38 @@
+{
+    "route": true,
+    "parser": "@typescript-eslint/parser",
+    "overrrides": [
+        {
+            "files": [
+                "*.ts"
+            ],
+            "extends": [
+                "eslint:recommended",
+                "plugin:@typescript-eslint/recommended"
+            ],
+            "parserOpetion": {
+                "project": [
+                    "./tsconfig.json"
+                ]
+            }
+        }
+    ],
+    "plugin": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/strict-boolean-expressions": [
+            2,
+            {
+                "allowString": false,
+                "allowNumber": false
+            }
+        ]
+    },
+    "ignorePatterns": [
+        "*!.*",
+        "dist",
+        "build",
+        "node_modules"
+    ]
+}
